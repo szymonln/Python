@@ -13,15 +13,18 @@ try:
 except ValueError:
     print ("Ojej, a przeciez to nie jest liczba...")
 
-riddle=random.randint(x,y)
+if x>y:
+    print ("Nie zrozumielismy sie?")
+else:
+    riddle=random.randint(x,y)
 
-while True:
-    try:
-        z = (int)(input("Zgaduj: "))
-        if z == riddle:
-            print ("Braawo")
-            break
-    except ValueError:
-        print ("Ojej, a przeciez to nie jest liczba...")
+    while True:
+        try:
+            z = (int)(input("Zgaduj: "))
+            if z == riddle:
+                print ("Braawo")
+                break
+        except ValueError:
+            print ("Ojej, a przeciez to nie jest liczba...")
 
 
